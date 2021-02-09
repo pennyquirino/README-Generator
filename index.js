@@ -1,3 +1,9 @@
+// create consts for fs and inquirer
+const fs = require("fs");
+const inquirer = require("inquirer");
+
+
+
 // questions to prompt user to make a readme file
 
 function promptUser(){
@@ -56,3 +62,14 @@ function promptUser(){
         }
     ]);
 } 
+// create a function to write the file 
+function writeToFile(fileName, data) {
+    fs.writeFile(fileName, data, err => {
+        if (err) {
+            return console.log(err);
+        }
+        console.log("You have successfully generated your readme file")
+    });
+}
+
+// need a promise and need to write the main function of this program
