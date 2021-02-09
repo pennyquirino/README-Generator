@@ -4,54 +4,28 @@ function promptUser(){
     return inquirer.prompt([
         {
             type: "input",
-            name: "projectName",
-            message: "What is the name of your project?",
+            name: "projectTitle",
+            message: "What is the title of your project?",
         },
         {
             type: "input",
-            name: "",
-            message: ""
+            name: "description",
+            message: "Describe your project including wins and struggles encountered:"
         },
         {
             type: "input",
-            name: "",
-            message: "",
+            name: "installation",
+            message: "What were the steps to get the development environment running?",
         },
         {
             type: "input",
-            name: "",
-            message: ""
+            name: "credits",
+            message: "List your collaborators, if any with links to their GitHub accounts"
         },
         {
             type: "input",
-            name: "",
-            message: " "
-           
-        },
-        {
-            type: "input",
-            name: "",
-            message: ""
-        },
-        {
-            type: "input",
-            name: "",
-            message: ""
-        },
-        {
-            type: "input",
-            name: "",
-            message: ""
-        },
-        {
-            type: "input",
-            name: "",
-            message: ""
-        },
-        {
-            type: "input",
-            name: "",
-            message: ""
+            name: "license",
+            message: "Let other developers know what they can or cannot do with your project"
         }
     ]);
 } 
