@@ -12,13 +12,11 @@ const generateMarkdownFile = require("./utils/generateMarkdownFile");
 
 // questions to prompt user to make a readme file
 
-inquirer
-    .prompt([
+const questions = [
         {
             type: "input",
             name: "projectTitle",
-            message: "What is the title of your project?",
-           
+            message: "What is the title of your project?",           
         },
         {
             type: "input",
@@ -43,24 +41,17 @@ inquirer
             type: "input",
             name: "license",
             message: "Let other developers know what they can or cannot do with your project",
-            validate: function (answer) {
-                if (answer.length < 1) {
-                    return console.log("Please list your license for this project or N/A");
-                }
-                return true;
-            }
+            
         }
     
         
-    ]);
-// create a function to write the file 
-// function writeToFile(fileName, data) {
-//     fs.writeFile(fileName, data, err => {
-//         if (err) {
-//             return console.log(err);
-//         }
-//         console.log("You have successfully generated your readme file")
-//     });
-// }
+    ];
 
-// need a promise and need to write the main function of this program
+    // need to place a function here to promt user with questions
+
+
+    // place function here to write the file after questions are answered by user
+
+
+
+    // figure out how to init this so that it actually does something
