@@ -66,6 +66,7 @@ const init = function (async) {
         const md = await generateMarkdownFile(answer);
 
         writeToFile("README.md", md);
-        
+    } catch (err) {
+
     }
-}
+};
