@@ -73,7 +73,7 @@ const questions = [
    
 
     // need to place a function here to promt user with questions
-function promptUser(questions) {
+function promptQuestion(questions) {
     return inquirer.prompt(questions);
 }
 
@@ -95,6 +95,6 @@ const init = async () => {
         console.log("Success! Your README file has been generated.");
 
     }
+};
 
-}
 init ();
