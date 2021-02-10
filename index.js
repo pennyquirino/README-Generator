@@ -15,6 +15,23 @@ const generateMarkdownFile = require("./utils/generateMarkdownFile");
 const questions = [
         {
             type: "input",
+            name: "githubProfile",
+            message: "What is your GitHub Profile URL?"
+        },
+
+        {
+            type: "input",
+            name: "githubRepo",
+            message: "What is the deloyed URL for this project?"
+        },
+
+        {
+            type: "input",
+            name: "name",
+            message: "What is your name?"
+        },
+        {
+            type: "input",
             name: "projectTitle",
             message: "What is the title of your project?",           
         },
