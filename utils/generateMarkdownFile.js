@@ -43,9 +43,14 @@ function generateMarkdownFile(data) {
     const licenseBadge = renderLicenseBadge(data.license);
     const licenseURL = renderLicenseURL(data.license);
     const licenseSection = renderLicenseSection(data.license);
-}
+
 
 return `# ${data.projectTitle}
+\n
+Created by: ${data.name}
+\n
+Deloyed Repo of this Project: ${data.githubRepo}
+
 
 // Table of Contents
 
@@ -68,10 +73,19 @@ ${data.installation}
 ${data.credits}
 
 ## License
-${data.license}
+${data.licenseURL}
+\n
+${data.licenseSection}
+\n
+${data.licenseBadge}
+
+
+## Check out more of my work via my GitHub Profile at: ${githubProfile}
 
 `;
 
+}
 
 
 // don't forget module exports
+module.exports = generateMarkdownFile;

@@ -76,7 +76,7 @@ function writeToFile(fileName, data) {
 
 
     // figure out how to init this so that it actually does something
-const init = function (async) {
+const init = async () => {
     try {
         const answer = await promptQuestion(questions);
 
@@ -88,3 +88,5 @@ const init = function (async) {
 
     }
 };
+
+init ();
