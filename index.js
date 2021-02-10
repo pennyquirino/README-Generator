@@ -3,10 +3,10 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const util = require("util");
-
+const generateMarkdown = require("./utils/generateMarkdown.js");
 const writeFileASync = util.promisify(fs.writeFile);
 
-const generateMarkdownFile = require("./utils/generateMarkdownFile");
+
 
 
 
@@ -55,17 +55,25 @@ const questions = [
             },
             {
 
-            type: "input",
+            type: "list",
             name: "license",
-            message: "Let other developers know what they can or cannot do with your project",
-            
+            message: "Please select your license you used or select unlicensed",
+            choices: [
+                "MIT",
+                "Apache 2.0",
+                "Simple 2.0",
+                "BSD 2-Clause",
+                "none"
+            ]
         }
+
+];
     
         
-    ];
+   
 
     // need to place a function here to promt user with questions
-function promptQuestion(questions) {
+function promptUser(questions) {
     return inquirer.prompt(questions);
 }
 
@@ -80,13 +88,13 @@ const init = async () => {
     try {
         const answer = await promptQuestion(questions);
 
-        const md = await generateMarkdownFile(answer);
+        const md = await generateMarkdown(answer);
 
         writeToFile("README.md", md);
     } catch (err) {
         console.log("Success! Your README file has been generated.");
 
     }
-};
 
+}
 init ();
