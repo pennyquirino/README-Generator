@@ -67,6 +67,7 @@ const init = function (async) {
 
         writeToFile("README.md", md);
     } catch (err) {
+        console.log("Success! Your README file has been generated.");
 
     }
 };
