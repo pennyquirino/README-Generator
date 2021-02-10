@@ -4,7 +4,9 @@ const inquirer = require("inquirer");
 const fs = require("fs");
 const util = require("util");
 
-const writeFileASync = promise here!!!!!
+const writeFileASync = util.promisify(fs.writeFile);
+
+const generateMarkdownFile = require("./utils/generateMarkdownFile");
 
 
 
