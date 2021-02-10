@@ -20,15 +20,15 @@ function renderLicenseBadge(license){
 function renderLicenseURL(license) {
     switch(license) {
     case "MIT":
-        return "https://img.shields.io/badge/License-MIT-blue.svg";
+        return "https://opensource.org/licenses/MIT";
     case "Unlicense":
-        return "https://img.shields.io/badge/License-unlicense-blue.svg";
+        return "https://https://opensource.org/licenses/unlicense";
     case "Apache 2.0":
-        return "https://img.shields.io/badge/License-Apache%202.0-blue.svg";
+        return "https://opensource.org/licenses/Apache-2.0";
     case "Simple 2.0":
-        return "https://img.shields.io/badge/License-simple-blue.svg";
+        return "https://opensource.org/licenses/Simple-2.0";
     case "BSD 2 Clause":
-        return "https://img.shields.io/badge/License-BSD%202--Clause-blue.svg";
+        return "https://opensource.org/licneses/BSD-2-Clause";
     }
 }
 
