@@ -1,4 +1,6 @@
-// create function to generate license if present
+
+    
+//  create function to generate license if present
 function renderLicenseBadge(license){
     switch(license) {
         case "MIT":
@@ -46,24 +48,19 @@ function generateMarkdown(data) {
 
 
 return `# ${data.projectTitle}
-\n
-Created by: ${data.name}
-\n
-Deloyed Repo of this Project: ${data.githubRepo}
 
 
 // Table of Contents
 
-
-
-
 ## Table of Contents
-* [Installation](#installation)
-* [Credits](#credits)
-* [License](#license)
+-[Description](#description)
+-[Installation](#installation)
+-[Credits](#credits)
+
+[![License](${licenseURL})](${licenseBadge})
 
 ## Description
-${installation}
+${description}
 
 
 ## Installation
