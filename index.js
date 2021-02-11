@@ -15,49 +15,38 @@ const writeFileASync = util.promisify(fs.writeFile);
 const questions = [
         {
             type: "input",
-            name: "githubProfile",
-            message: "What is your GitHub Profile URL?"
-        },
-
-        {
-            type: "input",
             name: "githubRepo",
             message: "What is the deloyed URL for this project?"
         },
 
         {
             type: "input",
-            name: "name",
-            message: "What is your name?"
-        },
-        {
-            type: "input",
             name: "projectTitle",
-            message: "What is the title of your project?",           
+            message: "Project Title",           
         },
         {
             type: "input",
             name: "description",
-            message: "Describe your project including wins and struggles encountered:",
+            message: "Project Description:",
            
         },
         {
             type: "input",
             name: "installation",
-            message: "What were the steps to get the development environment running?",
+            message: "Installation Steps:",
             
             },
         {
             type: "input",
             name: "credits",
-            message: "List your collaborators, if any with links to their GitHub accounts",
+            message: "List any collaborators here:",
           
             },
             {
 
             type: "list",
             name: "license",
-            message: "Please select your license you used or select unlicensed",
+            message: "Please select your license you used or select 'none'",
             choices: [
                 "MIT",
                 "Apache 2.0",

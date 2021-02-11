@@ -5,13 +5,11 @@ function renderLicenseBadge(license){
     switch(license) {
         case "MIT":
             return "https://img.shields.io/badge/License-MIT-blue.svg";
-        case "Unlicense":
-            return "https://img.shields.io/badge/License-unlicense-blue.svg";
-        case "Apache 2.0":
+         case "Apache 2.0":
             return "https://img.shields.io/badge/License-Apache%202.0-blue.svg";
         case "Simple 2.0":
             return "https://img.shields.io/badge/License-simple-blue.svg";
-        case "BSD 2 Clause":
+        case "BSD 2-Clause":
             return "https://img.shields.io/badge/License-BSD%202--Clause-blue.svg";
         
               }
@@ -23,13 +21,11 @@ function renderLicenseURL(license) {
     switch(license) {
     case "MIT":
         return "https://opensource.org/licenses/MIT";
-    case "Unlicense":
-        return "https://opensource.org/licenses/unlicense";
     case "Apache 2.0":
         return "https://opensource.org/licenses/Apache-2.0";
     case "Simple 2.0":
         return "https://opensource.org/licenses/Simple-2.0";
-    case "BSD 2 Clause":
+    case "BSD 2-Clause":
         return "https://opensource.org/licneses/BSD-2-Clause";
     }
 }
@@ -39,7 +35,8 @@ function renderLicenseSection(license) {
     if(license === "none") {
         return ``;
     } else {
-        return `This project and its code is connected to the ${license} license`;
+        return `## License
+        This project and its source code is released under the [${license}](${renderLicenseURL(license)}) license.`;
     }
    
 }
