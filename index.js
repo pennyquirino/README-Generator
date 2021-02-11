@@ -69,7 +69,12 @@ const questions = [
 
 ];
     
-        
+function writeToFile (fileName, data) {
+    fs.writeFile(fileName, data, function(error){
+        if (error) return console.log(error);
+        console.log(`${fileName} has been generated!`);
+    })
+}
    
 
     // need to place a function here to promt user with questions
@@ -77,24 +82,21 @@ const promptQuestion = () => {
     return inquirer.prompt(questions)
 }
 
-    // place function here to write the file after questions are answered by user
-// function writeToFile(fileName, data) {
-//     writeFileASync(fileName, data);
-// }
+
 
 
     // figure out how to init this so that it actually does something
 const init = async () => {
     try {
-        const answers = await promptQuestion(questions);
+        const answers = await promptQuestion()
+        .then(function (response) {
+            const data = generateMarkdown(response)
+            writeToFile("README.md", data)
+        })
+    } catch (error) {
+        console.log(error);
 
-        const md = await generateMarkdown(answers);
-
-        writeToFile("gen_README.md", md);
-    } catch (err) {
-        console.log(err);
-
-    }
+}
 }
 
 init ();
