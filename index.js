@@ -75,7 +75,7 @@ const questions = [
     // need to place a function here to promt user with questions
 const promptQuestion = () => {
     return inquirer.prompt(questions)
-};
+}
 
     // place function here to write the file after questions are answered by user
 // function writeToFile(fileName, data) {
@@ -86,15 +86,15 @@ const promptQuestion = () => {
     // figure out how to init this so that it actually does something
 const init = async () => {
     try {
-        const answer = await promptQuestion(questions);
+        const answers = await promptQuestion(questions);
 
-        const md = generateMarkdown(answer);
+        const md = await generateMarkdown(answers);
 
-        await writeToFile("README.md", md);
+        writeToFile("gen_README.md", md);
     } catch (err) {
         console.log(err);
 
     }
-};
+}
 
 init ();

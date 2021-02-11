@@ -36,7 +36,12 @@ function renderLicenseURL(license) {
 
 // create function to get license section of file if any
 function renderLicenseSection(license) {
-    return `# ${data.projectTitle} is released under ${license} and is open source`;
+    if(license === "none") {
+        return ``;
+    } else {
+        return `This project and its code is connected to the ${license} license`;
+    }
+   
 }
 
 
@@ -60,7 +65,7 @@ return `# ${data.projectTitle}
 [![License](${licenseURL})](${licenseBadge})
 
 ## Description
-${description}
+${data.description}
 
 
 ## Installation
@@ -77,7 +82,7 @@ ${data.licenseSection}
 ${data.licenseBadge}
 
 
-## Check out more of my work via my GitHub Profile at: ${githubProfile}
+## Check out more of my work via my GitHub Profile at: ${data.githubProfile}
 
 `;
 
