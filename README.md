@@ -24,7 +24,7 @@ No collaborators for this project
 This project and its source code is released under the [MIT](https://opensource.org/licenses/MIT) license.
 
 ## Demo Video
-<a href="https://drive.google.com/file/d/1BeAFuK4JIqUEmF3flX2sWy69SccIkgto/view">Click here to view video of application in action</a>
+<a href="https://drive.google.com/file/d/1BeAFuK4JIqUEmF3flX2sWy69SccIkgto/view">Click here to view video of application in action!</a>
 
 ![](demovid.JPG)
 
