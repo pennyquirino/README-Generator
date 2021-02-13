@@ -21,6 +21,12 @@ const questions = [
 
         {
             type: "input",
+            name: "githubProfile",
+            message: "What is your Github user name?"
+        },
+
+        {
+            type: "input",
             name: "projectTitle",
             message: "Project Title",           
         },

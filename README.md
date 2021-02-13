@@ -1,34 +1,28 @@
-# jf
+# dfdjg
 
+![GitHub License Badge](https://img.shields.io/badge/License-MIT-blue.svg)
 
-// Table of Contents
 
 ## Table of Contents
--[Description](#description)
--[Installation](#installation)
--[Credits](#credits)
+ - [Description](#description)
+ - [Installation](#installation)
+ - [Credits](#credits)
 
-[![License](https://opensource.org/licenses/Apache-2.0)](https://img.shields.io/badge/License-Apache%202.0-blue.svg)
+
 
 ## Description
-jf
+dljflsd
 
 
 ## Installation
-jf
+jdgj
 
 ## Credits
-jf
+jdgj
 
 ## License
-undefined
+This project and its source code is released under the [MIT](https://opensource.org/licenses/MIT) license.
 
 
-undefined
-
-
-undefined
-
-
-## Check out more of my work via my GitHub Profile at: undefined
+## Check out more of my work via my GitHub Profile at: djgldsj
 

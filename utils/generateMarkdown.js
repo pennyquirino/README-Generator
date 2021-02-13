@@ -3,14 +3,14 @@
 //  create function to generate license if present
 function renderLicenseBadge(license){
     switch(license) {
-        case "MIT":
-            return "https://img.shields.io/badge/License-MIT-blue.svg";
+        case "MIT": 
+            return "![GitHub License Badge](https://img.shields.io/badge/License-MIT-blue.svg)";
          case "Apache 2.0":
-            return "https://img.shields.io/badge/License-Apache%202.0-blue.svg";
+            return "![GitHub License Badge](https://img.shields.io/badge/License-Apache%202.0-blue.svg)";
         case "Simple 2.0":
-            return "https://img.shields.io/badge/License-simple-blue.svg";
+            return "![GitHub License Badge](https://img.shields.io/badge/License-simple-blue.svg)";
         case "BSD 2-Clause":
-            return "https://img.shields.io/badge/License-BSD%202--Clause-blue.svg";
+            return "![GitHub License Badge](https://img.shields.io/badge/License-BSD%202--Clause-blue.svg)";
         
               }
           }
@@ -36,7 +36,7 @@ function renderLicenseSection(license) {
         return ``;
     } else {
         return `## License
-        This project and its source code is released under the [${license}](${renderLicenseURL(license)}) license.`;
+This project and its source code is released under the [${license}](${renderLicenseURL(license)}) license.`;
     }
    
 }
@@ -44,22 +44,19 @@ function renderLicenseSection(license) {
 
 // creat function to generate the README file
 function generateMarkdown(data) {
-    const licenseBadge = renderLicenseBadge(data.license);
-    const licenseURL = renderLicenseURL(data.license);
-    const licenseSection = renderLicenseSection(data.license);
-
+    
 
 return `# ${data.projectTitle}
 
+${renderLicenseBadge(data.license)}
 
-// Table of Contents
 
 ## Table of Contents
--[Description](#description)
--[Installation](#installation)
--[Credits](#credits)
+ - [Description](#description)
+ - [Installation](#installation)
+ - [Credits](#credits)
 
-[![License](${licenseURL})](${licenseBadge})
+
 
 ## Description
 ${data.description}
@@ -71,12 +68,7 @@ ${data.installation}
 ## Credits
 ${data.credits}
 
-## License
-${data.licenseURL}
-\n
-${data.licenseSection}
-\n
-${data.licenseBadge}
+${renderLicenseSection(data.license)}
 
 
 ## Check out more of my work via my GitHub Profile at: ${data.githubProfile}
