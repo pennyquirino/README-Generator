@@ -1,4 +1,4 @@
-# dfdjg
+# README.md Generator
 
 ![GitHub License Badge](https://img.shields.io/badge/License-MIT-blue.svg)
 
@@ -11,18 +11,17 @@
 
 
 ## Description
-dljflsd
+To create a high-quality README.md file using command-line application with node.js
 
 
 ## Installation
-jdgj
+install all required npm packages, create index.js file and generateMarkdown.js file, create and test code
 
 ## Credits
-jdgj
+No collaborators for this project
 
 ## License
 This project and its source code is released under the [MIT](https://opensource.org/licenses/MIT) license.
 
 
-## Check out more of my work via my GitHub Profile at: djgldsj
-
+## Check out more of my work via my GitHub Profile at: https://github.com/pennyquirino
